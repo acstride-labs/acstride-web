@@ -32,7 +32,7 @@ Import `acstride-labs/acstride-web` into Vercel with the Next.js preset, Node.js
 
 `https://acstride.com` is the intended canonical origin, declared in `src/lib/site.ts`. Bind apex and `www` in Vercel, redirect `www` to apex, and apply **the exact DNS records shown by that project** in Alibaba Cloud DNS. Preserve existing MX/TXT and unrelated subdomains. Never copy guessed IPs or another project's CNAME. Verify DNS, TLS, redirects, and HTTPS afterwards.
 
-Vercel Hobby is limited to personal non-commercial use; this product marketing website needs a commercially permitted plan before production deployment. Do not create a paid subscription without the owner's approval. Next.js supports independent Node/Docker hosting too.
+The owner has confirmed that the current project is personal and non-commercial. Vercel Hobby may be used only within its personal non-commercial terms and cannot connect a private organization repository; this deployment uses the public website repository. Reassess the plan before introducing commercial activity. Do not create a paid subscription without the owner's approval. Next.js supports independent Node/Docker hosting too.
 
 ## Release limitations
 
