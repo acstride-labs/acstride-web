@@ -3,7 +3,7 @@ export type Locale = (typeof locales)[number];
 export const pages = ["", "download", "docs", "changelog", "privacy"] as const;
 export const siteUrl = "https://acstride.com";
 export const extensionRepo =
-  "https://github.com/acstride-labs/codeforces-workbench";
+  "https://github.com/acstride-labs/acstride-vscode-extension";
 export const organization = "https://github.com/acstride-labs";
 export const localeNames: Record<Locale, string> = {
   en: "English",

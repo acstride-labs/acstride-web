@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "AC-Sride — Your Codeforces workbench in VS Code",
+    "title": "Codeforces Workbench — Codeforces in VS Code | AC-Stride",
     "description": "Bring Codeforces rounds, solutions in multiple programming languages, and local tests into VS Code. Read, code, check your work, and submit from a familiar workspace."
   },
   "nav": {
@@ -13,11 +13,11 @@
     "skip": "Skip to content"
   },
   "hero": {
-    "badge": "YOUR EDITOR. YOUR NEXT ROUND.",
+    "badge": "Codeforces Workbench · by AC-Stride",
     "line1": "Stay in the zone.",
     "line2": "Solve the next one.",
     "description": "Bring the round into VS Code. Keep statements, solutions, and test cases together, with the tools you already know.",
-    "primary": "Get AC-Sride",
+    "primary": "Get Codeforces Workbench",
     "secondary": "See the workflow",
     "note": "Multiple languages · Desktop VS Code · Preview",
     "scroll": "FROM THE FIRST READ TO THE LAST CHECK"
@@ -111,9 +111,9 @@
   "principles": {
     "eyebrow": "MAKE YOURSELF AT HOME",
     "title": "Keep the editor.\nAdd the contest.",
-    "description": "Your shortcuts, language extensions, and compiler stay yours. AC-Sride adds the round and its problems to the workspace you already use.",
+    "description": "Your shortcuts, language extensions, and compiler stay yours. Codeforces Workbench adds the round and its problems to the workspace you already use.",
     "local": "Your working files stay local.",
-    "localBody": "No AC-Sride account is needed to write and test solutions locally.",
+    "localBody": "No Codeforces Workbench account is needed to write and test solutions locally.",
     "honest": "A preview, with clear limits.",
     "honestBody": "Codeforces site verification can interrupt downloads, login, or submission. Keep the official website handy as a fallback.",
     "languageSupport": "Multiple programming languages"
@@ -123,7 +123,7 @@
     "items": [
       {
         "q": "Is this a standalone editor?",
-        "a": "AC-Sride is an extension for desktop VS Code. Install it in your existing editor to work on Codeforces problems."
+        "a": "Codeforces Workbench is an extension for desktop VS Code. Install it in your existing editor to work on Codeforces problems."
       },
       {
         "q": "Do I need to install a compiler or runtime?",
@@ -155,7 +155,7 @@
     "privacy": "Privacy & licensing",
     "github": "GitHub",
     "note": "Independent project. Not affiliated with Codeforces or Microsoft.",
-    "copyright": "© 2026 AC-Sride Labs"
+    "copyright": "© 2026 AC-Stride"
   },
   "download": {
     "eyebrow": "MAKE ROOM FOR THE NEXT ROUND",
@@ -189,7 +189,7 @@
     "sections": [
       {
         "title": "01 / Set up your environment",
-        "body": "Install a matching VSIX and open a trusted local folder. In AC-Sride Settings → Environment checks, configure the tools for your preferred language and run the checks. Login is optional for local work."
+        "body": "Install a matching VSIX and open a trusted local folder. In Codeforces Workbench Settings → Environment checks, configure the tools for your preferred language and run the checks. Login is optional for local work."
       },
       {
         "title": "02 / Import a contest or problem",
@@ -248,7 +248,7 @@
     "sections": [
       {
         "title": "This website",
-        "body": "This site has no AC-Sride account, payment forms, analytics SDK or advertising trackers. The root uses browser language preferences to select a supported URL, with English fallback. Explicit language URLs stay selected. Hosting providers may process access requests and operational logs under their policies."
+        "body": "This site has no Codeforces Workbench account, payment forms, analytics SDK or advertising trackers. The root uses browser language preferences to select a supported URL, with English fallback. Explicit language URLs stay selected. Hosting providers may process access requests and operational logs under their policies."
       },
       {
         "title": "The extension",
