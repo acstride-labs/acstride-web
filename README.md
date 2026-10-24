@@ -24,6 +24,8 @@ The default entry redirects to `/en`. Pages are pre-rendered for `en`, `zh-CN`, 
 - `/<locale>/changelog` — extension changes
 - `/<locale>/privacy` — privacy and licensing information
 
+The root `/` detects the browser’s `Accept-Language`, honors preference weights, matches Chinese/English/Russian/Japanese (including regional tags), and falls back to English when none match. Explicit locale URLs keep their selected language. Only the root redirect is dynamic; localized pages remain static.
+
 Translations live in `messages/*.json`; tests enforce key and array parity. Future date/number formatting should use next-intl. The editor preview uses fixed sample results and does not execute code or contact Codeforces.
 
 ## Deployment
@@ -40,6 +42,6 @@ The owner has confirmed that the current project is personal and non-commercial.
 
 ## Release limitations
 
-[Extension repository](https://github.com/acstride-labs/acstride-vscode-extension). No Marketplace listing or public release asset was available when this site was authored; links lead to build instructions instead of invented downloads. Update that information when verified packages are published. Login, automatic submission, and paid plans are **not** advertised as available.
+[Extension repository](https://github.com/acstride-labs/acstride-vscode-extension). No Marketplace listing or public release asset was available when this site was authored; links lead to build instructions instead of invented downloads. Update that information when verified packages are published. Codeforces login and one-click submission are described as experimental, with site-verification limits and a manual fallback. Optional AI translation and request caching reflect the current source preview; no paid ACStride plan is advertised.
 
 No passwords, cookies, payment return URLs, domain purchase details, or tokens belong in this repository. Website original code/content are currently all rights reserved; no open-source license was selected. Third-party licenses are unchanged.

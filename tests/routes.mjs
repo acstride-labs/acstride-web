@@ -22,10 +22,13 @@ for (const locale of ["en", "zh-CN", "ru", "ja"]) {
     console.log(`OK ${path}`);
   }
 }
-assert.equal(
-  (await fetch(origin, { redirect: "manual" })).headers.get("location"),
-  "/en",
-);
+for (const [language, locale] of [["zh-CN,zh;q=0.9,en;q=0.8","zh-CN"],["ru-RU","ru"],["ja-JP","ja"],["fr-FR,de;q=0.8","en"],["en;q=0.2,ja;q=0.9","ja"]]) {
+ const response=await fetch(origin,{redirect:"manual",headers:{"Accept-Language":language}});
+ assert.equal(response.status,307);
+ assert.equal(response.headers.get("location"),`/${locale}`);
+ assert.match(response.headers.get("cache-control") || "",/no-store|private/);
+}
+assert.ok((await (await fetch(origin+"/en",{headers:{"Accept-Language":"ja-JP"}})).text()).includes('<html lang="en"'));
 for (const path of ["/de", "/en/no-such-page"])
   assert.equal((await fetch(origin + path)).status, 404, path);
 for (const path of ["/sitemap.xml", "/robots.txt", "/icon.svg", "/og.png"])

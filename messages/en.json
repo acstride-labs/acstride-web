@@ -69,6 +69,22 @@
       {
         "title": "Ready when the round starts.",
         "body": "Add a contest ahead of time. With VS Code running, released problems and samples download automatically."
+      },
+      {
+        "title": "Read in your language.",
+        "body": "Use an OpenAI-compatible provider and choose from nine translation languages. Translate on demand or automatically after import; preserve formulas and samples."
+      },
+      {
+        "title": "Submit with confidence.",
+        "body": "Optional Codeforces login enables experimental submission with a second confirmation and official-verdict notifications. Copy-and-open is always available."
+      },
+      {
+        "title": "Keep an eye on the round.",
+        "body": "View public submissions and rankings, find your position by handle, and keep the contest overview and statements in one tab."
+      },
+      {
+        "title": "Reuse AI work locally.",
+        "body": "A general input/output LRU cache shares identical requests. Toggle it and set entry/storage limits; keys stay in secure storage."
       }
     ]
   },
@@ -78,18 +94,18 @@
     "steps": [
       {
         "title": "Bring your round.",
-        "body": "Paste a Codeforces contest link or ID. Keep multiple contests organized in separate folders."
+        "body": "Import a contest or a single Codeforces problem, or create a local practice problem. Each collection is separate and shows the newest imports first."
       },
       {
         "title": "Make the solution yours.",
-        "body": "Read the statement beside the native editor. Choose C++ or Python and start from your own template."
+        "body": "Read statements and edit in native VS Code. New solutions use your default language and template; optional AI translation uses your chosen model and target language."
       },
       {
         "title": "Test. Refine. Submit.",
-        "body": "Run the cases, inspect differences, then copy your code and open the official submission page."
+        "body": "Run samples and custom tests. After Codeforces login, confirm a one-click submission and receive its verdict in a VS Code notification, or copy code to the official submit page."
       }
     ],
-    "notice": "You submit on Codeforces. ACStride does not currently log in or automatically submit solutions.",
+    "notice": "Codeforces login and one-click submission are experimental and may be blocked by site verification. Copy-and-open submission remains available without login.",
     "cta": "Read the quick start"
   },
   "principles": {
@@ -106,15 +122,15 @@
     "items": [
       {
         "q": "Is this a standalone editor?",
-        "a": "No. ACStride is a desktop VS Code extension, currently named CFIDE inside the extension. It adds contest tools to the editor you already use."
+        "a": "ACStride is a desktop VS Code extension, not a separate editor. Its compatibility identifiers still use cfide."
       },
       {
         "q": "Do I need to install Python?",
-        "a": "Only to run your Python solutions. Public problem downloads use a private bundled runtime. C++ solutions require your own compiler."
+        "a": "Only for running Python solutions. Codeforces tools are bundled into the platform-specific VSIX, with no separate CF Tool or downloader installation. C++ solutions require your compiler."
       },
       {
         "q": "Can it submit directly to Codeforces?",
-        "a": "Not currently. It saves and copies the selected solution and opens the matching official submission page. You paste and submit there."
+        "a": "Yes, experimentally: log in under Environment checks, select the official compiler and confirm the upload. Exact submissions are monitored for verdict notifications. Site verification may block login or submission; copy-and-open remains available."
       },
       {
         "q": "Can I use it offline?",
@@ -142,8 +158,8 @@
   "download": {
     "eyebrow": "START YOUR NEXT ROUND",
     "title": "A familiar editor.\nA better contest setup.",
-    "intro": "The extension is in early preview. Marketplace publication and public prebuilt downloads are not available yet. Build a platform-specific VSIX from the source to try it today.",
-    "status": "EARLY PREVIEW · v0.9",
+    "intro": "The current source preview is v0.13.1. Build a VSIX for your platform using the repository instructions; check GitHub Releases for any published packages. Build targets do not guarantee a validated download.",
+    "status": "SOURCE PREVIEW · v0.13.1",
     "source": "Open source repository",
     "sourceNote": "Source is visible; no open-source license has been selected for the extension.",
     "requirements": "What you need",
@@ -159,7 +175,7 @@
     "steps": [
       "Build the VSIX using the repository's development and packaging instructions.",
       "In VS Code, open Extensions: Install from VSIX… and choose the matching package.",
-      "Open a trusted folder, add a contest, and check your C++ / Python environment in Settings."
+      "Open a trusted folder, check your tools, set a default language and import a contest or problem. Configure optional Codeforces login and AI features in Settings."
     ],
     "guide": "Read the installation guide",
     "warning": "Local programs run on your computer, not in a security sandbox. Use only code you trust."
@@ -171,27 +187,35 @@
     "sections": [
       {
         "title": "01 / Set up your environment",
-        "body": "Install a matching VSIX. Open a trusted local folder, then open CFIDE Settings from the sidebar gear. Configure your C++ compiler and/or Python interpreter and select Check all. A green tick means that check passed."
+        "body": "Install a matching VSIX and open a trusted local folder. In ACStride Settings → Environment checks, configure C++ and Python tools and run Check all. Login is optional for local work."
       },
       {
-        "title": "02 / Add a contest",
-        "body": "Use the sidebar + button and paste a regular Codeforces contest URL or ID. Upcoming contests download released problems while VS Code is running. Adding a contest does not register you for the official round."
+        "title": "02 / Import a contest or problem",
+        "body": "The sidebar has Contests, Codeforces Problems and Local Practice. Each plus imports or creates an item using your default language. Downloads and bounded retries are automatic; selecting a missing statement starts recovery. Adding a contest does not register you."
       },
       {
         "title": "03 / Read and write",
-        "body": "Choose A, B, or another problem. Read the statement on the left and use the native code editor on the right. Switch languages with the language control; each language keeps its own file."
+        "body": "Contests use one editor tab named after the round. Its left rail switches between overview/rankings and problem statements; the header shows ended/countdown status. Standalone problems omit the multi-problem rail. C++ and Python sources remain separate."
       },
       {
         "title": "04 / Run your cases",
         "body": "Use sample tabs or add a custom case with +. Run all saves the selected solution before testing. Compare expected and actual output; local AC is not an official verdict."
       },
       {
-        "title": "05 / Submit on Codeforces",
-        "body": "Use Copy code & open submission page. It saves and copies the selected language's solution. Paste it on Codeforces, choose the correct compiler, and submit there. Set your public handle to track submissions and rankings."
+        "title": "05 / Submit with confirmation",
+        "body": "Log in to Codeforces under Environment checks. One-click submit saves the current code, asks for an official compiler and requires confirmation; verdicts appear as VS Code notifications. Without login, copy code and open the official page. The tracking handle is synced and locked while logged in; otherwise it is editable."
       },
       {
         "title": "06 / Make it yours",
-        "body": "Choose an interface language, configure starter code for C++ and Python, and adjust tools in Settings. Per-contest download and archive controls live in that contest's settings."
+        "body": "Settings has Environment checks, Basic settings, Coding settings and AI assistance tabs. Under Coding, choose the default language, starter templates, tools and local limits. Imports no longer ask for a language; automatic downloads have no per-contest switch."
+      },
+      {
+        "title": "07 / Translate statements",
+        "body": "Under AI assistance, set Base URL, model and API Key and test the live connection. Enable translation and choose its target language. Every {{language}} in the English default prompt is replaced before sending; restoring defaults requires confirmation. AI translation is optional and off by default."
+      },
+      {
+        "title": "08 / Configure AI caching",
+        "body": "The shared AI input/output LRU defaults to 100 entries and 50 MB. Either limit evicts least recently used requests. Disabling it preserves entries but skips request cache reads/writes; connection tests always contact the provider."
       }
     ],
     "trouble": "If a download fails",
@@ -201,14 +225,15 @@
   "changelog": {
     "eyebrow": "SMALL STEPS. BETTER ROUNDS.",
     "title": "What's new.",
-    "intro": "Changes in the VS Code extension, currently published in source as CFIDE.",
-    "version": "0.9.0",
-    "date": "October 24, 2026",
+    "intro": "Changes in the current VS Code extension source preview. Experimental online features still depend on Codeforces and your AI provider.",
+    "version": "0.13.1",
+    "date": "October 25, 2026",
     "items": [
-      "Editable starter-code templates for C++ and Python.",
-      "One-click environment checks, with individual pass/fail states.",
-      "Language-bound run and copy actions with automatic saving.",
-      "Compact problem navigation, test tabs, and localized interfaces."
+      "Three peer sidebar collections, single-problem import, default language and newest-first ordering.",
+      "One contest-named editor for overview and statements, with compact ended/countdown status.",
+      "Experimental Codeforces login/submission, confirmation, verdict notifications and synchronized tracking handle.",
+      "Four settings tabs, AI connection tests, nine translation targets and configurable prompts.",
+      "General AI input/output LRU cache with enable, entry and storage limits."
     ],
     "link": "Read the full changelog"
   },
@@ -219,15 +244,15 @@
     "sections": [
       {
         "title": "This website",
-        "body": "This version has no ACStride sign-in, payment form, analytics SDK, or advertising tracker. Your language is reflected in the URL. The hosting provider may process requests and operational logs under its own policies."
+        "body": "This site has no ACStride account, payment forms, analytics SDK or advertising trackers. The root uses browser language preferences to select a supported URL, with English fallback. Explicit language URLs stay selected. Hosting providers may process access requests and operational logs under their policies."
       },
       {
         "title": "The extension",
-        "body": "The current local workflow does not require an ACStride account or upload your solutions to an ACStride service. Public requests are sent to Codeforces. The copy-and-open action puts code on your system clipboard; you choose whether to paste and submit it."
+        "body": "Code, tests and downloaded data stay locally unless you choose an online action. Confirmed one-click submission uploads the current source to Codeforces; copy-and-open writes it to the clipboard. Optional AI translation sends statements and your prompt to your configured provider. API keys use VS Code SecretStorage; the configurable local cache stores AI request input/output, never raw API keys."
       },
       {
         "title": "External services",
-        "body": "Links to GitHub, Codeforces, and other services leave this website. Those services apply their own privacy practices and terms. Website hosting is separate from the local extension."
+        "body": "Codeforces login/submission and optional AI requests contact their respective providers directly. Site verification can block Codeforces actions. AI usage may be billed under your provider plan. GitHub, Codeforces, hosting and AI providers apply their own policies; the site and local extension are separate."
       },
       {
         "title": "Licensing",

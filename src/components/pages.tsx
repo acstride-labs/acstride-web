@@ -7,6 +7,7 @@ import {
   Check,
   CheckCheck,
   Download,
+  Languages,Send,Trophy,Database,
   FolderOpen,
   Layers3,
   Monitor,
@@ -21,7 +22,7 @@ import { buttonClass } from "./ui/button";
 
 export function Home({ locale }: { locale: Locale }) {
   const m = getMessages(locale);
-  const icons = [FolderOpen, Braces, CheckCheck, Zap];
+  const icons = [FolderOpen, Braces, CheckCheck, Zap,Languages,Send,Trophy,Database];
   return (
     <>
       <section className="hero shell">
