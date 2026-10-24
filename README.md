@@ -42,7 +42,7 @@ The owner has confirmed that the current project is personal and non-commercial.
 
 ## Release limitations
 
-[Extension repository](https://github.com/acstride-labs/acstride-vscode-extension). No Marketplace listing or public release asset was available when this site was authored; links lead to build instructions instead of invented downloads. Update that information when verified packages are published. Codeforces login and one-click submission are described as experimental, with site-verification limits and a manual fallback. Optional AI translation and request caching reflect the current source preview; no paid AC-Stride plan is advertised.
+[Extension repository](https://github.com/acstride-labs/codeforces-workbench). No Marketplace listing or public release asset was available when this site was authored; links lead to build instructions instead of invented downloads. Update that information when verified packages are published. Codeforces login and one-click submission are described as experimental, with site-verification limits and a manual fallback. Optional AI translation and request caching reflect the current source preview; no paid AC-Stride plan is advertised.
 
 No passwords, cookies, payment return URLs, domain purchase details, or tokens belong in this repository. Website original code/content are currently all rights reserved; no open-source license was selected. Third-party licenses are unchanged.
 
