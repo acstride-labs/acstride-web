@@ -5,7 +5,7 @@ export default function NotFound() {
     <html lang="en">
       <body>
         <main className="shell not-found">
-          <span className="eyebrow">ACSTRIDE / 404</span>
+          <span className="eyebrow">AC-SRIDE / 404</span>
           <h1>This path doesn't lead to an AC.</h1>
           <p>The page may have moved.</p>
           <Link className="button button-primary" href="/en">

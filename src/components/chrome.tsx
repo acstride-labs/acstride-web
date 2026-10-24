@@ -18,7 +18,7 @@ export function Brand() {
         </svg>
       </span>
       <span>
-        ACStride<span className="brand-dot">.</span>
+        AC-Sride<span className="brand-dot">.</span>
       </span>
     </span>
   );
@@ -35,7 +35,7 @@ export function Header({ locale }: { locale: Locale }) {
       </a>
       <header className="header">
         <div className="shell header-inner">
-          <Link href={`/${locale}`} aria-label="ACStride">
+          <Link href={`/${locale}`} aria-label="AC-Sride">
             <Brand />
           </Link>
           <nav

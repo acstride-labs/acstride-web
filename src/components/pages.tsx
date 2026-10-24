@@ -181,7 +181,7 @@ export function Home({ locale }: { locale: Locale }) {
       </section>
       <section className="shell">
         <div className="final-cta">
-          <div className="eyebrow">ACSTRIDE / NEXT ROUND</div>
+          <div className="eyebrow">{m.cta.eyebrow}</div>
           <h2>{m.cta.title}</h2>
           <p>{m.cta.body}</p>
           <Link className={buttonClass("light")} href={`/${locale}/download`}>
@@ -229,7 +229,7 @@ export function DownloadPage({ locale }: { locale: Locale }) {
             <Download size={33} />
           </div>
           <h2>
-            ACStride <span>for VS Code</span>
+            AC-Sride <span>for VS Code</span>
           </h2>
           <a className={buttonClass()} href={extensionRepo}>
             {t.source}

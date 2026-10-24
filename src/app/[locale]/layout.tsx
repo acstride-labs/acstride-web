@@ -20,14 +20,14 @@ export async function generateMetadata({
   const m = getMessages(locale);
   return {
     metadataBase: new URL(siteUrl),
-    title: { default: m.meta.title, template: "%s | ACStride" },
+    title: { default: m.meta.title, template: "%s | AC-Sride" },
     description: m.meta.description,
     icons: { icon: "/icon.svg" },
     openGraph: {
       title: m.meta.title,
       description: m.meta.description,
       type: "website",
-      siteName: "ACStride",
+      siteName: "AC-Sride",
       images: [{ url: "/og.png", width: 1200, height: 630 }],
     },
     twitter: {

@@ -84,7 +84,7 @@ export function EditorPreview() {
             <i />
           </div>
           <span>
-            ACStride <span className="dim">/</span> {t("contest")}
+            AC-Sride <span className="dim">/</span> {t("contest")}
           </span>
           <span className="window-chip">VS CODE</span>
         </div>
@@ -263,7 +263,7 @@ export function EditorPreview() {
           </div>
         </div>
         <div className="editor-status">
-          <span>✓ ACStride</span>
+          <span>✓ AC-Sride</span>
           <span>
             {language === "cpp" ? "C++20" : "Python 3"} <span>UTF-8</span>
           </span>

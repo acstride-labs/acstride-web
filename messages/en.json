@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "ACStride — Find your contest flow",
-    "description": "A focused Codeforces workspace inside VS Code. Read problems, write C++ or Python, and test without losing your flow."
+    "title": "AC-Sride — Your Codeforces workbench in VS Code",
+    "description": "Bring Codeforces rounds, C++ and Python solutions, and local tests into VS Code. Read, code, check your work, and submit from a familiar workspace."
   },
   "nav": {
     "features": "Features",
@@ -13,14 +13,14 @@
     "skip": "Skip to content"
   },
   "hero": {
-    "badge": "FOR THE NEXT ACCEPTED",
-    "line1": "Less switching.",
-    "line2": "More solving.",
-    "description": "Your problems, code, and test cases. One focused space inside VS Code, built for your next Codeforces round.",
-    "primary": "Get ACStride",
-    "secondary": "Explore the workflow",
-    "note": "C++ & Python · Desktop VS Code · Early preview",
-    "scroll": "BUILT FOR YOUR CONTEST FLOW"
+    "badge": "YOUR EDITOR. YOUR NEXT ROUND.",
+    "line1": "Stay in the zone.",
+    "line2": "Solve the next one.",
+    "description": "Bring the round into VS Code. Keep statements, solutions, and test cases together, with the tools you already know.",
+    "primary": "Get AC-Sride",
+    "secondary": "See the workflow",
+    "note": "C++ & Python · Desktop VS Code · Preview",
+    "scroll": "FROM THE FIRST READ TO THE LAST CHECK"
   },
   "demo": {
     "label": "Interactive layout preview — not a live judge",
@@ -44,85 +44,85 @@
     "descC": "Split a watermelon weighing w kilos into two parts, each with a positive even weight."
   },
   "strip": {
-    "one": "Your editor. Your setup.",
-    "two": "C++ and Python",
+    "one": "Keep your VS Code setup",
+    "two": "Write C++ or Python",
     "three": "Four interface languages",
-    "four": "Local-first workflow"
+    "four": "Solutions and tests saved locally"
   },
   "features": {
-    "eyebrow": "EVERYTHING IN ITS PLACE",
-    "title": "Stay with the problem.",
-    "description": "Keep the useful things close. Leave the busywork behind.",
+    "eyebrow": "THE ROUND, WITHIN REACH",
+    "title": "Keep your head in the problem.",
+    "description": "A place for the statement, your working solution, and the cases that help you get it right.",
     "items": [
       {
-        "title": "A whole round, neatly organized.",
-        "body": "Separate contest folders and A/B/C problem navigation. Switch problems without losing either solution."
+        "title": "One round. Room for every problem.",
+        "body": "Move between statements in one contest tab. Separate folders keep your work organized, whether you start with A or skip straight to C."
       },
       {
-        "title": "Your code, your language.",
-        "body": "Independent C++ and Python files, editable starter templates, and your familiar VS Code tooling."
+        "title": "Start with your own setup.",
+        "body": "Choose a default language and starter template. C++ and Python solutions stay separate, with your usual completion, extensions, and shortcuts."
       },
       {
-        "title": "Tests that tell you something.",
-        "body": "Sample and custom-case tabs, clear pass/fail states, stdout, stderr, and the first differing token."
+        "title": "Find the mismatch.",
+        "body": "Run samples and add your own cases. Inspect stdout, stderr, and the first differing token instead of guessing where the output went wrong."
       },
       {
-        "title": "Ready when the round starts.",
-        "body": "Add a contest ahead of time. With VS Code running, released problems and samples download automatically."
+        "title": "Add the round before the countdown.",
+        "body": "Leave VS Code running and released statements and samples download automatically, with retries if a download fails."
       },
       {
-        "title": "Read in your language.",
-        "body": "Use an OpenAI-compatible provider and choose from nine translation languages. Translate on demand or automatically after import; preserve formulas and samples."
+        "title": "Read it another way.",
+        "body": "Connect your AI provider and translate into one of nine languages. Translate as needed or after import, and switch back to the original statement anytime."
       },
       {
-        "title": "Submit with confidence.",
-        "body": "Optional Codeforces login enables experimental submission with a second confirmation and official-verdict notifications. Copy-and-open is always available."
+        "title": "Check it. Confirm it. Send it.",
+        "body": "Optional Codeforces login unlocks experimental submission with an explicit confirmation and verdict notifications. Copying to the official submit page is also available."
       },
       {
-        "title": "Keep an eye on the round.",
-        "body": "View public submissions and rankings, find your position by handle, and keep the contest overview and statements in one tab."
+        "title": "Know where you stand.",
+        "body": "Check public submissions and standings, find your handle, then return to the next problem without opening another contest tab."
       },
       {
-        "title": "Reuse AI work locally.",
-        "body": "A general input/output LRU cache shares identical requests. Toggle it and set entry/storage limits; keys stay in secure storage."
+        "title": "Keep the useful replies.",
+        "body": "A local input/output cache reuses identical AI requests. Choose its limits or turn it off; API keys live separately in secure storage."
       }
     ]
   },
   "workflow": {
-    "eyebrow": "FROM FIRST READ TO FINAL CHECK",
-    "title": "A little less friction.\nAt every step.",
+    "eyebrow": "GET SET, THEN GET SOLVING",
+    "title": "A familiar editor.\nA round ready to go.",
     "steps": [
       {
-        "title": "Bring your round.",
-        "body": "Import a contest or a single Codeforces problem, or create a local practice problem. Each collection is separate and shows the newest imports first."
+        "title": "Bring a problem—or the whole round.",
+        "body": "Import a Codeforces contest, pick a single problem, or create a local exercise. Each collection keeps its own list, newest first."
       },
       {
-        "title": "Make the solution yours.",
-        "body": "Read statements and edit in native VS Code. New solutions use your default language and template; optional AI translation uses your chosen model and target language."
+        "title": "Work the way you already do.",
+        "body": "Read the statement beside your native VS Code editor. New solutions use your chosen language and template; optional AI translation is there when you need it."
       },
       {
-        "title": "Test. Refine. Submit.",
-        "body": "Run samples and custom tests. After Codeforces login, confirm a one-click submission and receive its verdict in a VS Code notification, or copy code to the official submit page."
+        "title": "Put your solution to the test.",
+        "body": "Run samples, try edge cases, and inspect the output. When you are ready, confirm a one-click submission or copy your code to Codeforces."
       }
     ],
-    "notice": "Codeforces login and one-click submission are experimental and may be blocked by site verification. Copy-and-open submission remains available without login.",
-    "cta": "Read the quick start"
+    "notice": "Codeforces login and direct submission are experimental. Site verification may block them; local practice and copy-and-open submission remain available.",
+    "cta": "Open the quick start"
   },
   "principles": {
-    "eyebrow": "LESS TOOL. MORE FOCUS.",
-    "title": "Made to fit your editor.\nNot replace it.",
-    "description": "Use your existing shortcuts, language extensions, and compiler. ACStride brings the contest context; VS Code stays your workspace.",
-    "local": "Your solutions stay on your machine.",
-    "localBody": "No ACStride account is needed for the current local workflow.",
-    "honest": "Clear about what is ready.",
-    "honestBody": "This is an early preview. Downloads may encounter site verification; keep the official site available."
+    "eyebrow": "MAKE YOURSELF AT HOME",
+    "title": "Keep the editor.\nAdd the contest.",
+    "description": "Your shortcuts, language extensions, and compiler stay yours. AC-Sride adds the round and its problems to the workspace you already use.",
+    "local": "Your working files stay local.",
+    "localBody": "No AC-Sride account is needed to write and test solutions locally.",
+    "honest": "A preview, with clear limits.",
+    "honestBody": "Codeforces site verification can interrupt downloads, login, or submission. Keep the official website handy as a fallback."
   },
   "faq": {
     "title": "Before you jump in.",
     "items": [
       {
         "q": "Is this a standalone editor?",
-        "a": "ACStride is a desktop VS Code extension, not a separate editor. Its compatibility identifiers still use cfide."
+        "a": "AC-Sride is an extension for desktop VS Code. Install it in your existing editor to work on Codeforces problems."
       },
       {
         "q": "Do I need to install Python?",
@@ -139,12 +139,13 @@
     ]
   },
   "cta": {
-    "title": "Your next round.\nA clearer workspace.",
-    "body": "Set up your editor. Get back to solving.",
-    "button": "Get started"
+    "title": "Give your next problem\na familiar home.",
+    "body": "Set your language, bring a problem, and try a few cases.",
+    "button": "See installation options",
+    "eyebrow": "READY FOR ANOTHER PROBLEM?"
   },
   "footer": {
-    "tagline": "Find your contest flow.",
+    "tagline": "Your editor. Your next accepted.",
     "product": "Product",
     "resources": "Resources",
     "download": "Installation",
@@ -153,16 +154,16 @@
     "privacy": "Privacy & licensing",
     "github": "GitHub",
     "note": "Independent project. Not affiliated with Codeforces or Microsoft.",
-    "copyright": "© 2026 ACStride Labs"
+    "copyright": "© 2026 AC-Sride Labs"
   },
   "download": {
-    "eyebrow": "START YOUR NEXT ROUND",
-    "title": "A familiar editor.\nA better contest setup.",
-    "intro": "The current source preview is v0.13.1. Build a VSIX for your platform using the repository instructions; check GitHub Releases for any published packages. Build targets do not guarantee a validated download.",
-    "status": "SOURCE PREVIEW · v0.13.1",
+    "eyebrow": "MAKE ROOM FOR THE NEXT ROUND",
+    "title": "Your contest workbench,\ninside VS Code.",
+    "intro": "The current source preview is v0.14.0. Build a VSIX for your platform using the repository instructions; check GitHub Releases for any published packages. Build targets do not guarantee a validated download.",
+    "status": "SOURCE PREVIEW · v0.14.0",
     "source": "Open source repository",
     "sourceNote": "Source is visible; no open-source license has been selected for the extension.",
-    "requirements": "What you need",
+    "requirements": "Before you start",
     "requirementsBody": "Desktop VS Code, a trusted local folder, and a C++ compiler and/or Python 3 for your solutions. The downloader needs no separate Python installation.",
     "platforms": "Build targets",
     "platformNote": "Targets do not imply published or validated binaries. Check the repository's CI and packaging instructions before distributing a build.",
@@ -171,7 +172,7 @@
       "Windows · x64",
       "Linux · x64 (glibc)"
     ],
-    "install": "Install a VSIX",
+    "install": "Install a VSIX package",
     "steps": [
       "Build the VSIX using the repository's development and packaging instructions.",
       "In VS Code, open Extensions: Install from VSIX… and choose the matching package.",
@@ -181,13 +182,13 @@
     "warning": "Local programs run on your computer, not in a security sandbox. Use only code you trust."
   },
   "docs": {
-    "eyebrow": "A SHORT PATH TO YOUR FIRST RUN",
-    "title": "The quick start.",
-    "intro": "From a fresh installation to a tested solution, without the detour.",
+    "eyebrow": "START WITH ONE PROBLEM",
+    "title": "Your first run.",
+    "intro": "Install the extension, check your tools, and run your first set of samples.",
     "sections": [
       {
         "title": "01 / Set up your environment",
-        "body": "Install a matching VSIX and open a trusted local folder. In ACStride Settings → Environment checks, configure C++ and Python tools and run Check all. Login is optional for local work."
+        "body": "Install a matching VSIX and open a trusted local folder. In AC-Sride Settings → Environment checks, configure C++ and Python tools and run Check all. Login is optional for local work."
       },
       {
         "title": "02 / Import a contest or problem",
@@ -211,29 +212,31 @@
       },
       {
         "title": "07 / Translate statements",
-        "body": "Under AI assistance, set Base URL, model and API Key and test the live connection. Enable translation and choose its target language. Every {{language}} in the English default prompt is replaced before sending; restoring defaults requires confirmation. AI translation is optional and off by default."
+        "body": "Under AI assistance, set Base URL, model and API Key and test the live connection. Enable translation and choose its target language. Every {{language}} in the English default prompt is replaced before sending; restoring defaults requires confirmation. AI translation is optional and off by default. Translation switches and target language now save immediately; prompt edits save automatically after a short pause."
       },
       {
         "title": "08 / Configure AI caching",
         "body": "The shared AI input/output LRU defaults to 100 entries and 50 MB. Either limit evicts least recently used requests. Disabling it preserves entries but skips request cache reads/writes; connection tests always contact the provider."
       }
     ],
-    "trouble": "If a download fails",
+    "trouble": "If a statement will not download",
     "troubleBody": "Retry the problem download later. Site verification may block anonymous requests. Existing solutions, custom cases, and cached statements are preserved. Keep the official website as your fallback.",
-    "reference": "Full technical documentation"
+    "reference": "Read the technical documentation"
   },
   "changelog": {
-    "eyebrow": "SMALL STEPS. BETTER ROUNDS.",
-    "title": "What's new.",
-    "intro": "Changes in the current VS Code extension source preview. Experimental online features still depend on Codeforces and your AI provider.",
-    "version": "0.13.1",
+    "eyebrow": "A BETTER FIT, UPDATE BY UPDATE",
+    "title": "What changed.",
+    "intro": "Updates to the extension source preview. Online features still depend on Codeforces and your chosen AI provider.",
+    "version": "0.14.0",
     "date": "October 25, 2026",
     "items": [
       "Three peer sidebar collections, single-problem import, default language and newest-first ordering.",
       "One contest-named editor for overview and statements, with compact ended/countdown status.",
       "Experimental Codeforces login/submission, confirmation, verdict notifications and synchronized tracking handle.",
       "Four settings tabs, AI connection tests, nine translation targets and configurable prompts.",
-      "General AI input/output LRU cache with enable, entry and storage limits."
+      "General AI input/output LRU cache with enable, entry and storage limits.",
+      "Translation switches and target language now save immediately; prompt edits save automatically after a short pause.",
+      "Settings, contest views and tests now share VSCode Elements controls that follow the editor theme."
     ],
     "link": "Read the full changelog"
   },
@@ -244,7 +247,7 @@
     "sections": [
       {
         "title": "This website",
-        "body": "This site has no ACStride account, payment forms, analytics SDK or advertising trackers. The root uses browser language preferences to select a supported URL, with English fallback. Explicit language URLs stay selected. Hosting providers may process access requests and operational logs under their policies."
+        "body": "This site has no AC-Sride account, payment forms, analytics SDK or advertising trackers. The root uses browser language preferences to select a supported URL, with English fallback. Explicit language URLs stay selected. Hosting providers may process access requests and operational logs under their policies."
       },
       {
         "title": "The extension",
@@ -266,8 +269,8 @@
     "contact": "Open the issue tracker"
   },
   "notFound": {
-    "title": "This path doesn't lead to an AC.",
-    "body": "The page may have moved. Let's get you back to the start.",
+    "title": "This page is out of bounds.",
+    "body": "Let’s get you back to the start.",
     "home": "Back to home"
   }
 }
