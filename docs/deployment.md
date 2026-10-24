@@ -2,45 +2,38 @@
 
 ## Branches and environments
 
-- `main`: production, served at https://acstride.com. Only release PRs from this repository's `staging` branch may merge here.
-- `staging`: persistent Vercel Preview environment. Feature and fix PRs target this branch.
-- Short-lived branches: create from `staging`; use names such as `codex/update-download-page`.
+- `main`: default and production branch, served at https://acstride.com. Changes arrive through pull requests.
+- Short-lived feature/fix branches: create from `main`; use names such as `codex/update-download-page`.
+- No permanent staging branch is needed. Every pushed development branch/PR gets its own Vercel Preview URL; previews do not replace production or each other.
 
-One Vercel project hosts both environments. Production Branch is `main`; a push to `staging` creates a Preview deployment with its persistent branch URL. Use the exact branch URL shown in Vercel. No paid custom environment or second project is required. Production and Preview environment variables are configured separately; currently the website requires no application secrets.
+One Vercel project hosts Preview and Production. Production Branch is explicitly `main`. Vercel supplies a stable URL per branch and an immutable URL per deployment. Use the exact URLs shown on the PR or Vercel deployment page. A branch URL follows new commits, so record the tested SHA and deployment URL. No paid custom environment or second project is required.
 
-## Everyday development
+Production and Preview environment variables are configured separately. Currently the website requires no application secrets. Preserve existing Preview access protection; no authentication bypass token is needed.
 
-1. Sync `staging` and create a short-lived branch.
+## Everyday development and release
+
+1. Update `main` and create a short-lived branch.
 2. Implement the change and run `npm ci` and `npm run check` with Node.js 24.
-3. Open a PR targeting `staging`. Both `Website validation` and `Release policy` must pass. Inspect the PR's Vercel preview and merge.
-4. Wait for the `staging` deployment to be Ready. Verify the persistent branch preview. A newer staging commit invalidates the previous verification.
-
-## Release to production
-
-1. Freeze the staging changes for this release; record the deployment URL and tested HEAD SHA.
-2. Open a PR with base `main`, head `staging`. Fill in the release checklist. Feature branches and forks named `staging` are rejected by the required release policy check.
-3. Wait for all required checks, the Vercel preview, and staging verification to succeed.
-4. Use **Create a merge commit** for `staging` → `main`. Do not squash or rebase this long-lived branch. Keep `staging` after merging.
-5. Vercel builds production automatically. Its build command is `npm run check`, so tests, build and type checks must all succeed before the deployment can become Ready. A GitHub CI run alone does not sequence Vercel deployments.
-6. Verify https://acstride.com, the browser-language redirect, all four homepages, download/docs links, and the www redirect. Record the production deployment URL and SHA in the release PR.
-7. Synchronize `main` back to `staging` with a PR and a merge commit before the next cycle, particularly after hotfixes. Feature PRs may use squash merge.
-
-Preview deployments use `X-Robots-Tag: noindex, nofollow, noarchive`, robots metadata and a disallow-all robots.txt. These discourage indexing; they are not authentication. Keep the existing Vercel Preview access protection. Production remains indexable.
+3. Open a PR targeting `main`. GitHub runs `Website validation`; Vercel builds an independent Preview. Both must succeed before merge.
+4. Verify the latest Preview, including affected locales, responsive layout, navigation and download links. Record the deployment URL and tested commit SHA in the PR checklist. New commits invalidate the old verification.
+5. Merge the PR into `main`. Squash merge is recommended for a single feature; merge commits are also available. A solo maintainer does not need another person's approval, but still completes the checklist.
+6. Vercel automatically builds Production. Its build command is `npm run check`, so tests, production build and type checks must pass before the deployment becomes Ready. A GitHub CI run alone does not sequence Vercel deployments.
+7. Verify https://acstride.com, browser-language redirect, all four homepages, affected pages and the www redirect. Record the production deployment URL and SHA on the PR. Delete the completed feature branch when no longer needed.
 
 ## Repository protections
 
-Protect both `main` and `staging`: require a PR, require `Website validation` and `Release policy`, block force pushes and deletion, and require conversations to be resolved. A solo maintainer does not need another person's approval. Require branches to be up to date before merging. Do not enable a linear-history requirement: release and synchronization PRs need merge commits.
+Protect `main`: require a PR, require `Website validation` and `Vercel`, block force pushes and deletion, require conversations to be resolved, and require the PR branch to be up to date. No bypass actors and no mandatory external approvals are needed for a solo maintainer. Require another Preview verification if updating the branch changes its contents.
 
-The default PR target is `staging`. Repository administrators retain control of the configuration but normal work follows these rules. Keep automatic deletion of merged branches disabled so the long-lived staging branch survives releases.
+Keep `main` as the default branch so ordinary PRs target it. Merge methods do not need to preserve a long-lived staging branch because there is no such branch.
+
+## Search indexing
+
+Preview deployments use `X-Robots-Tag: noindex, nofollow, noarchive`, robots metadata and a disallow-all robots.txt. These discourage indexing; they are not authentication. Production remains indexable. Do not put production-only credentials or future production databases into Preview environment settings.
 
 ## Tracking and rollback
 
-Ordinary website changes do not require package version bumps, tags or GitHub Releases. Track releases by their PR, commit SHA and Vercel deployment URL. Optional milestone tags can mark major redesigns.
+Ordinary website changes do not require package version bumps, tags or GitHub Releases. Track them by PR, commit SHA and Vercel deployment URL. Optional milestone tags may mark a major redesign.
 
-For a production incident, use Vercel Instant Rollback to the last known-good production deployment, verify the domain, then fix the source through a PR. A deployment rollback does not revert Git history. If the offending change remains on `main`, revert it through `staging` and a release PR before the next production deployment; otherwise it will return.
+For a production incident, use Vercel Instant Rollback to the last known-good production deployment, verify the domain, then fix the source through a normal feature-branch PR. A deployment rollback does not revert Git history: revert or fix the offending source change before the next production deployment, otherwise it will return.
 
-If a critical hotfix must branch from `main`, merge its PR into `staging`, verify and release `staging` → `main`; this keeps the normal admission policy intact. For a truly urgent incident, roll back the deployment first instead of bypassing branch protection.
-
-## Bootstrap
-
-The initial staging branch and protection rules are set up once. Thereafter every code change follows the PR flow above. Enabling branch protection is separate from committing workflow files: check the repository Settings after applying this runbook.
+A hotfix follows the same short flow: branch from current `main`, open a PR, wait for checks and Preview, verify, merge. Roll back the deployment first if the incident is urgent rather than bypassing branch protection.

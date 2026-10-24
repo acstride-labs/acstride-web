@@ -1,9 +1,9 @@
 name: Website checks
 on:
   push:
-    branches: [main, staging]
+    branches: [main]
   pull_request:
-    branches: [main, staging]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,28 +11,6 @@ concurrency:
   group: website-checks-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
-  release-policy:
-    name: Release policy
-    runs-on: ubuntu-latest
-    steps:
-      # Use the target branch's policy so a PR cannot replace its own admission check.
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.base.sha || github.sha }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - name: Validate release source
-        env:
-          PR_BASE: ${{ github.base_ref }}
-          PR_HEAD: ${{ github.head_ref }}
-          PR_HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
-        run: |
-          if [ -f scripts/release-policy.mjs ]; then
-            node scripts/release-policy.mjs
-          elif [ "$GITHUB_EVENT_NAME" = "pull_request" ] && [ "$PR_BASE" = "main" ]; then
-            test "$PR_HEAD" = "staging" && test "$PR_HEAD_REPOSITORY" = "$GITHUB_REPOSITORY"
-          fi
   check:
     name: Website validation
     runs-on: ubuntu-latest

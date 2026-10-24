@@ -2,19 +2,19 @@
 
 Describe the user-visible result and the reason for the change.
 
-## Validation
+## Preview verification
 
-- [ ] `npm run check` passes.
-- [ ] Preview deployment checked, including affected locales and mobile layout.
-
-## Production release (staging → main only)
-
-For feature PRs, target `staging` and leave this section empty.
-
-- Staging deployment URL:
+- Preview deployment URL:
 - Tested commit SHA:
 - Pages and locales verified:
-- [ ] The current staging HEAD is the commit that was tested; no new changes were added after verification.
+
+- [ ] `npm run check` passes.
+- [ ] The latest PR commit has a successful Vercel Preview deployment.
+- [ ] Affected locales and mobile layout were checked on that deployment.
+- [ ] No new changes were added after verification; otherwise the Preview was checked again.
+
+## Production
+
 - [ ] Production smoke check and rollback target identified.
 
-No version bump, Git tag or GitHub Release is required for ordinary website deployments.
+Merge into `main` to deploy production automatically. No version bump, Git tag or GitHub Release is required for ordinary website deployments.

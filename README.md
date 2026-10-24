@@ -48,6 +48,6 @@ No passwords, cookies, payment return URLs, domain purchase details, or tokens b
 
 ## Development and release flow
 
-Feature branches → PR into `staging` → Vercel Preview verification → release PR from `staging` into `main` → automatic production deployment.
+Feature/fix branch → PR into `main` → independent Vercel Preview verification → checks pass → merge into `main` → automatic production deployment. No permanent staging branch is needed.
 
 Read [the deployment runbook](docs/deployment.md) for branch protections, release checks, environment settings and rollback. Normal website deployments are tracked by commit SHA and deployment URL; they do not require a version bump, tag or GitHub Release.
