@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "AC-Sride — 题面、代码、测试，都在 VS Code",
+    "title": "AC-Sride — 题面、代码、测试 都在 VS Code",
     "description": "为 Codeforces 比赛与练习而做的 VS Code 扩展。导入比赛或单题，编写 C++ / Python，运行样例与自定义测试，还可配置 AI 题面翻译。"
   },
   "nav": {
@@ -14,8 +14,8 @@
   },
   "hero": {
     "badge": "为 Codeforces 比赛与练习而做",
-    "line1": "题面、代码、测试，",
-    "line2": "都在 VS Code。",
+    "line1": "题面、代码、测试",
+    "line2": "都在 VS Code",
     "description": "导入比赛或单题，读题、写代码、跑样例，在熟悉的编辑器里完成。需要翻译题面、查看排名，或把代码提交到 Codeforces，也都有入口。",
     "primary": "开始使用 AC-Sride",
     "secondary": "先看一场比赛怎么做",
@@ -145,7 +145,7 @@
     "eyebrow": "下一道题，准备好了吗？"
   },
   "footer": {
-    "tagline": "题面、代码、测试，都在 VS Code。",
+    "tagline": "题面、代码、测试 都在 VS Code",
     "product": "产品",
     "resources": "资源",
     "download": "安装指南",
