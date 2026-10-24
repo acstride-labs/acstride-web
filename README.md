@@ -16,7 +16,7 @@ npm run dev
 npm run check
 ```
 
-The default entry redirects to `/en`. Pages are pre-rendered for `en`, `zh-CN`, `ru`, and `ja`:
+The root entry selects a supported browser language, with English fallback. Localized pages are pre-rendered for `en`, `zh-CN`, `ru`, and `ja`:
 
 - `/<locale>` — homepage and clearly labelled interactive layout illustration
 - `/<locale>/download` — early-preview installation information
