@@ -19,6 +19,9 @@ export async function generateMetadata({
   if (!isLocale(locale)) notFound();
   const m = getMessages(locale);
   return {
+    ...(process.env.VERCEL_ENV === "preview"
+      ? { robots: { index: false, follow: false } }
+      : {}),
     metadataBase: new URL(siteUrl),
     title: { default: m.meta.title, template: "%s | AC-Sride" },
     description: m.meta.description,
