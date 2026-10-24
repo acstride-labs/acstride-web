@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "AC-Sride — 题面、代码、测试 都在 VS Code",
+    "title": "Codeforces Workbench — 题面、代码、测试 都在 VS Code",
     "description": "为 Codeforces 比赛与练习而做的 VS Code 扩展。支持多种编程语言，导入比赛或单题后即可编写解答、运行测试，还可配置 AI 题面翻译。"
   },
   "nav": {
@@ -13,11 +13,11 @@
     "skip": "跳到正文"
   },
   "hero": {
-    "badge": "为 Codeforces 比赛与练习而做",
+    "badge": "Codeforces Workbench · AC-Stride 出品",
     "line1": "题面、代码、测试",
     "line2": "都在 VS Code",
     "description": "导入比赛或单题，读题、写代码、跑样例，在熟悉的编辑器里完成。需要翻译题面、查看排名，或把代码提交到 Codeforces，也都有入口。",
-    "primary": "开始使用 AC-Sride",
+    "primary": "开始使用 Codeforces Workbench",
     "secondary": "先看一场比赛怎么做",
     "note": "支持多种编程语言 · 桌面版 VS Code · 预览版",
     "scroll": "从读懂题目，到验证解法"
@@ -111,9 +111,9 @@
   "principles": {
     "eyebrow": "习惯不必重来",
     "title": "继续用你的 VS Code，\n继续按你的方式解题。",
-    "description": "快捷键、语言扩展、编译器都由你选择。AC-Sride 负责整理比赛和题目，让这套环境更适合刷题与参赛。",
+    "description": "快捷键、语言扩展、编译器都由你选择。Codeforces Workbench 负责整理比赛和题目，让这套环境更适合刷题与参赛。",
     "local": "代码在本地，用例也在。",
-    "localBody": "本地做题不需要注册 AC-Sride 账号。",
+    "localBody": "本地做题不需要注册 Codeforces Workbench 账号。",
     "honest": "还在打磨，也把限制说清楚。",
     "honestBody": "当前为预览版。题目下载、登录或提交可能遇到 Codeforces 网页验证，官网仍可作为备用。",
     "languageSupport": "支持多种编程语言"
@@ -123,7 +123,7 @@
     "items": [
       {
         "q": "这是一个独立编辑器吗？",
-        "a": "AC-Sride 是桌面版 VS Code 的扩展。装在现有编辑器里，就能导入 Codeforces 题目并编写、测试解答。"
+        "a": "Codeforces Workbench 是桌面版 VS Code 的扩展。装在现有编辑器里，就能导入 Codeforces 题目并编写、测试解答。"
       },
       {
         "q": "需要额外安装编译器或运行环境吗？",
@@ -155,7 +155,7 @@
     "privacy": "隐私与许可",
     "github": "GitHub",
     "note": "独立项目，与 Codeforces 和 Microsoft 无隶属关系。",
-    "copyright": "© 2026 AC-Sride Labs"
+    "copyright": "© 2026 AC-Stride"
   },
   "download": {
     "eyebrow": "先装好，再开题",
@@ -189,7 +189,7 @@
     "sections": [
       {
         "title": "01 / 检测编程环境",
-        "body": "安装对应平台的 VSIX 并打开可信目录。在 AC-Sride 设置的“环境检测”中配置所用语言的工具并检测；本地做题无需登录。"
+        "body": "安装对应平台的 VSIX 并打开可信目录。在 Codeforces Workbench 设置的“环境检测”中配置所用语言的工具并检测；本地做题无需登录。"
       },
       {
         "title": "02 / 导入比赛或题目",
@@ -248,7 +248,7 @@
     "sections": [
       {
         "title": "这个网站",
-        "body": "本站没有 AC-Sride 账号、支付表单、统计 SDK 或广告追踪器。首页根据浏览器语言跳转到对应语言，未匹配时回退英文；显式语言网址保持不变。托管商可能按其政策处理请求和运维日志。"
+        "body": "本站没有 Codeforces Workbench 账号、支付表单、统计 SDK 或广告追踪器。首页根据浏览器语言跳转到对应语言，未匹配时回退英文；显式语言网址保持不变。托管商可能按其政策处理请求和运维日志。"
       },
       {
         "title": "VS Code 插件",

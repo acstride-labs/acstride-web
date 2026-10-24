@@ -23,14 +23,14 @@ export async function generateMetadata({
       ? { robots: { index: false, follow: false } }
       : {}),
     metadataBase: new URL(siteUrl),
-    title: { default: m.meta.title, template: "%s | AC-Sride" },
+    title: { default: m.meta.title, template: "%s | Codeforces Workbench" },
     description: m.meta.description,
     icons: { icon: "/icon.svg" },
     openGraph: {
       title: m.meta.title,
       description: m.meta.description,
       type: "website",
-      siteName: "AC-Sride",
+      siteName: "Codeforces Workbench",
       images: [{ url: "/og.png", width: 1200, height: 630 }],
     },
     twitter: {

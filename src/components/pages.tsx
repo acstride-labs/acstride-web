@@ -228,7 +228,7 @@ export function DownloadPage({ locale }: { locale: Locale }) {
             <Download size={33} />
           </div>
           <h2>
-            AC-Sride <span>for VS Code</span>
+            Codeforces Workbench <span>for VS Code</span>
           </h2>
           <a className={buttonClass()} href={extensionRepo}>
             {t.source}
