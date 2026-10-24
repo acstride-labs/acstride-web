@@ -147,8 +147,7 @@ export function Home({ locale }: { locale: Locale }) {
           <p>{m.principles.description}</p>
           <div className="editor-tags">
             <span>VS Code</span>
-            <span>C++</span>
-            <span>Python</span>
+            <span>{m.principles.languageSupport}</span>
             <span>Codeforces</span>
           </div>
         </div>
