@@ -12,9 +12,9 @@ export function Brand() {
   return (
     <span className="brand">
       <span className="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32">
-          <path d="M5 24 14 7h5l8 17h-6l-5-11-5 11z" fill="currentColor" />
-          <path d="m7 26 17-9" stroke="var(--paper)" strokeWidth="3" />
+        <svg viewBox="48 80 424 344" fill="none">
+          <path fill="#00C99A" d="M64 399 223 112q9-16 27-16h13q18 0 27 16l108 195h-59l-84-152-83 151 28 23 117-87q9-7 16 2t-2 16L166 400q-10 8-23 8H70q-11 0-6-9Z" />
+          <path fill="#2874F0" d="m342 323 47 85h62q13 0 7-12l-40-73Z" />
         </svg>
       </span>
       <span>
