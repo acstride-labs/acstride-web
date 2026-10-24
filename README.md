@@ -28,6 +28,10 @@ Translations live in `messages/*.json`; tests enforce key and array parity. Futu
 
 ## Deployment
 
+Live site: [acstride.com](https://acstride.com) · [简体中文](https://acstride.com/zh-CN). Hosted on Vercel Hobby as project `acstride-web`, connected to this public repository's `main` branch for automatic deployments. The fallback address is [acstride-web.vercel.app](https://acstride-web.vercel.app).
+
+Alibaba Cloud DNS connects the apex via an A record and `www` via the project-specific CNAME. HTTPS is enabled, and `www.acstride.com` permanently redirects to `acstride.com`. Domain access and the redirect were verified on 2026-10-24.
+
 Import `acstride-labs/acstride-web` into Vercel with the Next.js preset, Node.js 24, repository root, and `npm run build`. No secrets or environment variables are required. Keep analytics disabled unless privacy disclosures are updated.
 
 `https://acstride.com` is the intended canonical origin, declared in `src/lib/site.ts`. Bind apex and `www` in Vercel, redirect `www` to apex, and apply **the exact DNS records shown by that project** in Alibaba Cloud DNS. Preserve existing MX/TXT and unrelated subdomains. Never copy guessed IPs or another project's CNAME. Verify DNS, TLS, redirects, and HTTPS afterwards.
