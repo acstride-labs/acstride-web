@@ -42,7 +42,9 @@ The owner has confirmed that the current project is personal and non-commercial.
 
 ## Release limitations
 
-[Extension repository](https://github.com/acstride-labs/codeforces-workbench). No Marketplace listing or public release asset was available when this site was authored; links lead to build instructions instead of invented downloads. Update that information when verified packages are published. Codeforces login and one-click submission are described as experimental, with site-verification limits and a manual fallback. Optional AI translation and request caching reflect the current source preview; no paid AC-Stride plan is advertised.
+Codeforces Workbench **0.1.0 Alpha** was published on October 25, 2026 (UTC+8). Install from the [public Marketplace listing](https://marketplace.visualstudio.com/items?itemName=acstride.codeforces-workbench) or download Windows x64, Linux x64, macOS Intel and Apple Silicon VSIX packages from [GitHub Release v0.1.0](https://github.com/acstride-labs/codeforces-workbench/releases/tag/v0.1.0). SHA256SUMS is available in the same release. Users do not need to build a VSIX. Release links are centralized in `src/lib/release.ts`; update them together with all four catalogs for future releases.
+
+This is an Alpha preview. Codeforces login and one-click submission remain experimental and may encounter website verification; copying code and opening the official submission page remains available.
 
 No passwords, cookies, payment return URLs, domain purchase details, or tokens belong in this repository. Website original code/content are currently all rights reserved; no open-source license was selected. Third-party licenses are unchanged.
 
