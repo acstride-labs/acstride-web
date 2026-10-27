@@ -160,27 +160,31 @@
   "download": {
     "eyebrow": "次の一問に取りかかる前に",
     "title": "VS Code に、\n競プロの作業場を。",
-    "intro": "現在のソースプレビューは v0.14.0 です。リポジトリの手順で対応プラットフォームの VSIX をビルドしてください。公開パッケージは GitHub Releases で確認できます。ビルド対象は検証済み配布物を保証しません。",
-    "status": "ソースプレビュー · v0.14.0",
+    "intro": "Codeforces Workbench 0.1.0 Alpha を2026年10月25日（UTC+8）に公開しました。Marketplace からインストールするか、お使いの環境に合う VSIX をダウンロードしてください。ビルドは不要です。",
+    "status": "0.1.0 · ALPHA",
     "source": "ソースのリポジトリへ",
     "sourceNote": "ソースの公開は自由な利用許諾を意味しません。拡張機能のオープンソースライセンスは未定です。",
     "requirements": "準備するもの",
     "requirementsBody": "デスクトップ版 VS Code、信頼できるローカルフォルダー、使用する言語のコンパイラまたは実行環境が必要です。Codeforces ツールは拡張機能に同梱されています。",
-    "platforms": "ビルド対象の環境",
-    "platformNote": "ビルド対象であることは、パッケージの公開や動作確認を保証しません。配布前に CI とパッケージ手順を確認してください。",
+    "platforms": "VSIX をダウンロード",
+    "platformNote": "OS と CPU に合うパッケージを選んでください。Linux は glibc（Ubuntu 22.04 以降を基準）が必要です。Linux ARM、Windows ARM、Alpine/musl は未対応です。",
     "platformNames": [
-      "macOS · Apple Silicon / Intel",
       "Windows · x64",
-      "Linux · x64（glibc）"
+      "Linux · x64 (glibc)",
+      "macOS · Intel (x64)",
+      "macOS · Apple Silicon (arm64)"
     ],
     "install": "VSIX パッケージのインストール",
     "steps": [
-      "リポジトリの開発・パッケージ手順に沿って VSIX をビルドします。",
+      "下記から対応する 0.1.0 Alpha の VSIX をダウンロードするか、Marketplace で AC-Stride の Codeforces Workbench をインストールします。プレリリース版を選べる場合は、そちらを選択してください。",
       "VS Code で「Extensions: Install from VSIX…」を実行し、対応するパッケージを選びます。",
       "信頼できるフォルダーで環境をチェックし、既定の言語を設定してコンテストや問題をインポートします。Codeforces ログインと AI は設定から利用できます。"
     ],
     "guide": "導入手順を見る",
-    "warning": "プログラムは PC 上で直接動作します。サンドボックスではないため、信頼できるコードだけを実行してください。"
+    "warning": "プログラムは PC 上で直接動作します。サンドボックスではないため、信頼できるコードだけを実行してください。",
+    "marketplace": "Marketplace からインストール",
+    "release": "リリースノート",
+    "checksums": "SHA256 チェックサム"
   },
   "docs": {
     "eyebrow": "最初のサンプル実行まで",
@@ -228,7 +232,7 @@
     "eyebrow": "少しずつ、使いやすく",
     "title": "最近の更新",
     "intro": "拡張機能のソースプレビューの変更点です。オンライン機能は Codeforces と接続先の AI サービスの状況に左右されます。",
-    "version": "0.14.0",
+    "version": "0.1.0 Alpha",
     "date": "2026年10月25日",
     "items": [
       "3 つの同階層サイドバー、単独問題の追加、既定の言語と追加日時順。",

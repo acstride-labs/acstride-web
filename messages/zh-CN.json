@@ -160,27 +160,31 @@
   "download": {
     "eyebrow": "先装好，再开题",
     "title": "把竞赛工作台，\n放进你的 VS Code。",
-    "intro": "当前源码预览版为 v0.14.0。可按仓库说明构建对应平台的 VSIX；已发布安装包以 GitHub Releases 的实际列表为准，构建目标不代表已验证的下载包。",
-    "status": "源码预览 · v0.14.0",
+    "intro": "Codeforces Workbench 0.1.0 Alpha 已于北京时间 2026 年 10 月 25 日发布。可从扩展商店安装，也可直接下载对应平台的 VSIX，无需自行构建。",
+    "status": "0.1.0 · ALPHA",
     "source": "前往源码仓库",
     "sourceNote": "源码公开不等于开放授权，插件尚未确定开源协议。",
     "requirements": "开始前准备好",
     "requirementsBody": "桌面版 VS Code、一个可信的本地目录，以及所用编程语言对应的编译器或运行环境。Codeforces 工具已随插件打包，开箱即用。",
-    "platforms": "可构建的平台",
-    "platformNote": "支持构建不代表已经发布或验证对应安装包。分发前请核对仓库 CI 结果和打包说明。",
+    "platforms": "下载 VSIX 安装包",
+    "platformNote": "请选择与系统及 CPU 对应的安装包。Linux 需要 glibc（基于 Ubuntu 22.04+）；暂不支持 Linux ARM、Windows ARM 和 Alpine/musl。",
     "platformNames": [
-      "macOS · Apple Silicon / Intel",
       "Windows · x64",
-      "Linux · x64（glibc）"
+      "Linux · x64 (glibc)",
+      "macOS · Intel (x64)",
+      "macOS · Apple Silicon (arm64)"
     ],
     "install": "安装 VSIX 扩展包",
     "steps": [
-      "按照仓库的开发与打包说明，构建对应平台的 VSIX。",
+      "下载下方对应平台的 0.1.0 Alpha VSIX，或在扩展商店安装 AC-Stride 发布的 Codeforces Workbench。如有预发行版选项，请选择预发行版。",
       "在 VS Code 中运行“扩展：从 VSIX 安装…”，选择安装包。",
       "打开可信目录，检测编程环境、设置默认语言，然后导入比赛或题目；可在设置中配置 Codeforces 登录和 AI 功能。"
     ],
     "guide": "查看安装步骤",
-    "warning": "本地测试会在你的电脑上执行程序，并非安全沙箱。请只运行可信代码。"
+    "warning": "本地测试会在你的电脑上执行程序，并非安全沙箱。请只运行可信代码。",
+    "marketplace": "从扩展商店安装",
+    "release": "版本说明",
+    "checksums": "SHA256 校验文件"
   },
   "docs": {
     "eyebrow": "从第一道题开始",
@@ -228,7 +232,7 @@
     "eyebrow": "每次更新，顺手一点",
     "title": "最近更新",
     "intro": "这里记录扩展源码预览版的变化。在线功能仍受 Codeforces 和所配置 AI 服务的可用性影响。",
-    "version": "0.14.0",
+    "version": "0.1.0 Alpha",
     "date": "2026 年 10 月 25 日",
     "items": [
       "侧栏三组同级，支持单题导入、默认语言与按导入时间倒序。",

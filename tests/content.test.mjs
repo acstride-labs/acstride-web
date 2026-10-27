@@ -46,3 +46,23 @@ test("no dead links or invented marketplace listings in page source", () => {
     );
   }
 });
+
+test("published Alpha downloads cover the four release platforms", async () => {
+  const { releaseVersion, releaseDownloads, checksumsUrl, marketplaceUrl } = await import('../src/lib/release.ts');
+  assert.equal(releaseVersion, '0.1.0');
+  assert.deepEqual(releaseDownloads.map(url => url.split('/').at(-1)), [
+    'codeforces-workbench-0.1.0-win32-x64.vsix',
+    'codeforces-workbench-0.1.0-linux-x64.vsix',
+    'codeforces-workbench-0.1.0-darwin-x64.vsix',
+    'codeforces-workbench-0.1.0-darwin-arm64.vsix',
+  ]);
+  assert.ok(releaseDownloads.every(url => url.includes('/releases/download/v0.1.0/')));
+  assert.ok(checksumsUrl.endsWith('/v0.1.0/SHA256SUMS'));
+  assert.equal(new URL(marketplaceUrl).searchParams.get('itemName'), 'acstride.codeforces-workbench');
+  for (const locale of locales) {
+    const catalog = load(locale);
+    assert.equal(catalog.download.platformNames.length, releaseDownloads.length);
+    assert.match(catalog.download.status, /0\.1\.0.*ALPHA/);
+    assert.doesNotMatch(JSON.stringify(catalog), /v?0\.14\.0/);
+  }
+});
