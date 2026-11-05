@@ -160,27 +160,31 @@
   "download": {
     "eyebrow": "MAKE ROOM FOR THE NEXT ROUND",
     "title": "Your contest workbench,\ninside VS Code.",
-    "intro": "The current source preview is v0.14.0. Build a VSIX for your platform using the repository instructions; check GitHub Releases for any published packages. Build targets do not guarantee a validated download.",
-    "status": "SOURCE PREVIEW · v0.14.0",
+    "intro": "Codeforces Workbench 0.1.0 Alpha was released on October 25, 2026 (UTC+8). Install from the Marketplace or download the VSIX for your platform. No local build is needed.",
+    "status": "0.1.0 · ALPHA",
     "source": "Open source repository",
     "sourceNote": "Source is visible; no open-source license has been selected for the extension.",
     "requirements": "Before you start",
     "requirementsBody": "Desktop VS Code, a trusted local folder, and the compiler or runtime for your chosen language. Codeforces tools work out of the box.",
-    "platforms": "Build targets",
-    "platformNote": "Targets do not imply published or validated binaries. Check the repository's CI and packaging instructions before distributing a build.",
+    "platforms": "Download a VSIX",
+    "platformNote": "Choose your operating system and CPU. Linux requires glibc (Ubuntu 22.04+ baseline); ARM Linux, Windows ARM and Alpine/musl are not supported.",
     "platformNames": [
-      "macOS · Apple Silicon / Intel",
       "Windows · x64",
-      "Linux · x64 (glibc)"
+      "Linux · x64 (glibc)",
+      "macOS · Intel (x64)",
+      "macOS · Apple Silicon (arm64)"
     ],
     "install": "Install a VSIX package",
     "steps": [
-      "Build the VSIX using the repository's development and packaging instructions.",
+      "Download the matching 0.1.0 Alpha VSIX below, or install Codeforces Workbench by AC-Stride from the Marketplace. Choose the pre-release version if offered.",
       "In VS Code, open Extensions: Install from VSIX… and choose the matching package.",
       "Open a trusted folder, check your tools, set a default language and import a contest or problem. Configure optional Codeforces login and AI features in Settings."
     ],
     "guide": "Read the installation guide",
-    "warning": "Local programs run on your computer, not in a security sandbox. Use only code you trust."
+    "warning": "Local programs run on your computer, not in a security sandbox. Use only code you trust.",
+    "marketplace": "Install from Marketplace",
+    "release": "Release notes",
+    "checksums": "SHA256 checksums"
   },
   "docs": {
     "eyebrow": "START WITH ONE PROBLEM",
@@ -228,7 +232,7 @@
     "eyebrow": "A BETTER FIT, UPDATE BY UPDATE",
     "title": "What changed.",
     "intro": "Updates to the extension source preview. Online features still depend on Codeforces and your chosen AI provider.",
-    "version": "0.14.0",
+    "version": "0.1.0 Alpha",
     "date": "October 25, 2026",
     "items": [
       "Three peer sidebar collections, single-problem import, default language and newest-first ordering.",

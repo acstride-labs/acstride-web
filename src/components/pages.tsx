@@ -1,3 +1,4 @@
+import { marketplaceUrl, releaseUrl, releaseDownloads, checksumsUrl } from "@/lib/release";
 import Link from "next/link";
 import {
   ArrowDown,
@@ -230,10 +231,11 @@ export function DownloadPage({ locale }: { locale: Locale }) {
           <h2>
             Codeforces Workbench <span>for VS Code</span>
           </h2>
-          <a className={buttonClass()} href={extensionRepo}>
-            {t.source}
+          <a className={buttonClass()} href={marketplaceUrl}>
+            {t.marketplace}
             <ArrowUpRight size={16} />
           </a>
+          <p><a href={releaseUrl}>{t.release}</a> · <a href={checksumsUrl}>{t.checksums}</a> · <a href={extensionRepo}>{t.source}</a></p>
           <p className="fine-print">{t.sourceNote}</p>
           <hr />
           <h3>{t.requirements}</h3>
@@ -252,10 +254,10 @@ export function DownloadPage({ locale }: { locale: Locale }) {
           </Link>
           <div className="platforms">
             <h3>{t.platforms}</h3>
-            {t.platformNames.map((name) => (
+            {t.platformNames.map((name, index) => (
               <div key={name}>
                 <Monitor size={17} />
-                {name}
+                <a href={releaseDownloads[index]}>{name} · VSIX</a>
               </div>
             ))}
             <p className="fine-print">{t.platformNote}</p>
